@@ -1,0 +1,86 @@
+body.chat-page {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    margin: 0;
+}
+
+.chat-container {
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border: 1px solid #b2ebf2;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    height: 350px;
+    overflow-y: auto;
+    border-bottom: 1px solid #b2ebf2;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.input-box {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #b2ebf2;
+    background-color: #e0f7fa;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #b2ebf2;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.chat-input:focus {
+    border-color: #00acc1;
+}
+
+.chat-btn {
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(135deg, #00acc1, #00838f);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background 0.3s ease;
+}
+
+.chat-btn:hover {
+    background: linear-gradient(135deg, #00838f, #00acc1);
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    transition: background-color 0.3s ease;
+}
+
+.user {
+    background-color: #b2ebf2;
+    align-self: flex-end;
+}
+
+.bot {
+    background-color: #c8e6c9;
+    align-self: flex-start;
+} 
