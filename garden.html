@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaceful Garden - Find Your Calm</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/feature.css">
+    <link rel="stylesheet" href="css/garden.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="feature-page">
+    <div class="site-title">
+        <span class="mood">Mood</span><span class="wise">Wise</span>
+    </div>
+    <header class="main-header">
+        <a href="index.html" class="logo">
+            <span class="mood">Mood</span><span class="wise">Wise</span>
+        </a>
+    </header>
+
+    <div class="feature-content">
+        <h1>Your Peaceful Garden</h1>
+        
+        <div class="garden-controls">
+            <div class="flower-selector">
+                <button class="flower-btn" data-flower="daisy">🌼 Daisy</button>
+                <button class="flower-btn" data-flower="rose">🌹 Rose</button>
+                <button class="flower-btn" data-flower="tulip">🌷 Tulip</button>
+                <button class="flower-btn" data-flower="sunflower">🌻 Sunflower</button>
+                <button class="flower-btn" data-flower="lotus">💮 Lotus</button>
+            </div>
+        </div>
+
+        <div class="garden-container">
+            <div class="sky"></div>
+            <div class="garden-plot">
+                <!-- Flowers will be added here dynamically -->
+            </div>
+            <div class="ground"></div>
+        </div>
+
+        <div class="garden-info">
+            <div class="garden-stats">
+                <div class="stat">
+                    <span class="stat-label">Flowers Planted:</span>
+                    <span class="stat-value" id="flowerCount">0</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html#features" class="back-link">← Back to Activities</a>
+    </div>
+
+    <script src="js/garden.js"></script>
+</body>
+</html> 
