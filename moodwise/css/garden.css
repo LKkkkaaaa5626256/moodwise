@@ -1,0 +1,459 @@
+/* Site Title */
+.site-title {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+}
+
+.site-title .mood {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-title .wise {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #2196F3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Garden Container Styles */
+.garden-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to bottom, #8B4513, #654321);
+    border-radius: 0 0 20px 20px;
+}
+
+.garden-plot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to bottom, #90EE90, #228B22);
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+}
+
+/* Control Styles */
+.garden-controls {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.mood-selector, .flower-selector {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mood-btn, .flower-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mood-btn:hover, .flower-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mood Button Variants */
+.mood-btn.happy {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: white;
+}
+
+.mood-btn.peaceful {
+    background: linear-gradient(135deg, #87CEEB, #4FC3F7);
+    color: white;
+}
+
+.mood-btn.excited {
+    background: linear-gradient(135deg, #FF69B4, #FF1493);
+    color: white;
+}
+
+.mood-btn.loved {
+    background: linear-gradient(135deg, #FF6B6B, #FF4081);
+    color: white;
+}
+
+.mood-btn.grateful {
+    background: linear-gradient(135deg, #9575CD, #673AB7);
+    color: white;
+}
+
+/* Flower Styles */
+.flower {
+    position: absolute;
+    font-size: 2rem;
+    transform-origin: bottom center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.flower:hover {
+    transform: scale(1.2);
+}
+
+/* Planting Effect */
+.planting-effect {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: plant 1s ease-out forwards;
+}
+
+@keyframes plant {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Garden Info Styles */
+.garden-info {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.garden-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stat {
+    text-align: center;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #228B22;
+}
+
+.garden-achievements {
+    text-align: center;
+}
+
+.garden-achievements h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.achievement-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+/* Animations */
+@keyframes growFlower {
+    from {
+        transform: scale(0) translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatCloud {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+/* Cloud Element */
+.cloud {
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    opacity: 0.8;
+    animation: floatCloud 20s linear infinite;
+}
+
+/* Weather Effects */
+.rain {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.5));
+    animation: rain 0.5s linear infinite;
+}
+
+.sun {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    background: #FFD700;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #FFD700;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-in 2.7s;
+}
+
+/* Achievement Styles */
+.achievement {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: achievementUnlock 0.5s ease-out;
+}
+
+.achievement:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-icon {
+    font-size: 2rem;
+}
+
+.achievement-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Weather Effects */
+.heart {
+    position: absolute;
+    animation: floatHeart 3s ease-in-out infinite;
+}
+
+.star {
+    position: absolute;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.rainbow {
+    position: absolute;
+    font-size: 5rem;
+    bottom: 20%;
+    animation: rainbowFloat 3s ease-in-out infinite;
+}
+
+/* Particle Effects */
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float-particle 1s ease-out forwards;
+}
+
+/* Additional Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes achievementUnlock {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatHeart {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes rainbowFloat {
+    0%, 100% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(5deg);
+    }
+}
+
+/* Selected State Styles */
+.mood-btn.selected, .flower-btn.selected {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #4CAF50;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .garden-container {
+        height: 50vh;
+    }
+
+    .mood-selector, .flower-selector {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mood-btn, .flower-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .garden-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stat {
+        padding: 8px 16px;
+    }
+
+    .flower {
+        font-size: 1.5rem;
+    }
+
+    .flower-btn {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    .notification {
+        width: 90%;
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .achievement {
+        flex-direction: column;
+        text-align: center;
+    }
+} 
